@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rift Codex Card Image Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Rift Codex Card Gallery</h1>
+  </header>
+
+  <main class="container">
+    <form id="searchForm" class="filter-panel">
+      <!-- Search Bar -->
+      <div class="form-group search-bar">
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Search card name (e.g. Master Yi)..." 
+          autocomplete="off"
+        />
+        <button type="submit">Search</button>
+      </div>
+
+      <!-- Filters Section -->
+      <div class="filter-grid">
+        <div class="form-group">
+          <label for="typeFilter">Type</label>
+          <select id="typeFilter">
+            <option value="">All Types</option>
+            <option value="Unit">Unit</option>
+            <option value="Spell">Spell</option>
+            <option value="Gear">Gear</option>
+            <option value="Rift">Rift</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="rarityFilter">Rarity</label>
+          <select id="rarityFilter">
+            <option value="">All Rarities</option>
+            <option value="Common">Common</option>
+            <option value="Uncommon">Uncommon</option>
+            <option value="Rare">Rare</option>
+            <option value="Epic">Epic</option>
+            <option value="Promo">Promo</option>
+          </select>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label>
+            <input type="checkbox" id="signatureFilter"> Signature Only
+          </label>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label>
+            <input type="checkbox" id="altArtFilter"> Alternate Art Only
+          </label>
+        </div>
+      </div>
+    </form>
+
+    <div id="statusMessage" class="status"></div>
+
+    <!-- Gallery Grid for Images Only -->
+    <section id="resultsGrid" class="image-grid"></section>
+  </main>
+
+</body>
+</html>
