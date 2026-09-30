@@ -1,0 +1,2 @@
+# riftboundapi
+get by name
